@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<body>
+    <h2>Question 1 in Console</h2>
+    <script>
+        const mixedArray = ['PIZZA', 10, true, 25, false, 'Wings']
+
+        function lowercaseWords(array){
+            return new Promise((resolve, reject) => {
+                for(var x = 0; x < array.length, x++){
+                    array[x] = array[x].toLowerCase();
+
+                    
+                    if (array[x].filter(lowercase => typeof 'integer' || 'boolean')){
+                        if (array[x] == array[x].toLowerCase()){      
+                            resolve(array);
+                        }
+                        else{
+                            reject("Error: The array contains values that are not strings")
+                        } 
+                    }  
+                }
+            })
+        }
+
+        lowercaseWords(mixedArray)
+            .then((result) => console.log(result))
+            .catch((error => console.log(error)))
+
+    </script>
+</body>
+</html>
